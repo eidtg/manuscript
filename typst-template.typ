@@ -3,7 +3,7 @@
   email: none,
   alias: none,
   address: none,
-  cofirst: false
+  equal-contributor: false
 ) = {
   let info = (
     "affiliation": affiliation
@@ -17,8 +17,8 @@
   if address != none {
     info.insert("address", address)
   }
-  if cofirst != none {
-    info.insert("cofirst", cofirst)
+  if equal-contributor != none {
+    info.insert("equal-contributor", equal-contributor)
   }
   info
 }
@@ -48,10 +48,10 @@
       }
     ]
   }
-  if author.cofirst == "thefirst" [
-    #footnote("cofirst-author-mark") <fnt:cofirst-author>
-  ] else if author.cofirst == "cofirst" [
-    #footnote(<fnt:cofirst-author>)
+  if author.equal-contributor == "thefirst" [
+    #footnote("equal-contributor-author-mark") <fnt:equal-contributor-author>
+  ] else if author.equal-contributor == "equal-contributor" [
+    #footnote(<fnt:equal-contributor-author>)
   ]
 }
 
@@ -139,7 +139,7 @@
   //     "email": "author.name@example.com", // Optional
   //     "address": "Mail address",  // Optional
   //     "name": "Alias Name", // Optional
-  //     "cofirst": false // Optional, identify whether this author is the co-first author
+  //     "equal-contributor": false // Optional, identify whether this author is the co-first author
   //   )
   // )
   authors: ("Author Name": author-meta("affiliation-label")),
@@ -190,7 +190,7 @@
     )
   }
   set footnote(numbering: "*")
-  show "cofirst-author-mark": [These authors contributed equally to this work.]
+  show "equal-contributor-author-mark": [These authors contributed equally to this work.]
 
   let template = (
     title: default-title,
@@ -212,8 +212,8 @@
   let inst_keys = affiliations.keys()
 
   // Find co-fisrt authors
-  let cofirst_index = authors.values().enumerate().filter(
-    meta => "cofirst" in meta.at(1) and meta.at(1).at("cofirst") == true
+  let equal-contributor_index = authors.values().enumerate().filter(
+    meta => "equal-contributor" in meta.at(1) and meta.at(1).at("equal-contributor") == true
   ).map(it => it.at(0))
 
   let author_list = ()
@@ -226,7 +226,7 @@
       name: none,
       insts: (),
       corresponding: false,
-      cofirst: "no",
+      equal-contributor: "no",
       address: none,
       email: none,
     )
@@ -276,11 +276,11 @@
       author_list_item.insert("email", email)
     }
 
-    if cofirst_index.len() > 0 {
+    if equal-contributor_index.len() > 0 {
       if ai == 0 {
-        author_list_item.insert("cofirst", "thefirst")
-      } else if cofirst_index.contains(ai) {
-        author_list_item.insert("cofirst", "cofirst")
+        author_list_item.insert("equal-contributor", "thefirst")
+      } else if equal-contributor_index.contains(ai) {
+        author_list_item.insert("equal-contributor", "equal-contributor")
       }
     }
 

@@ -4,17 +4,25 @@ subtitle: Manuscript Subtitle
 author:
   - name: First Author
     orcid: 0000-0000-0000-0000
-    corresponding: true
     email: email@adress.com
     adress: City, Country
     affiliation:
       - ref: Main Institution
       - ref: Secondary Institution
+    attributes:
+      equal-contributor: true
+      corresponding: true
   - name: Second Author
+    equal-contributor: true
     orcid: 0000-0000-0000-0000
-    corresponding: false
     affiliation:
       - ref: Main Institution
+    attributes:
+      equal-contributor: true
+  - name: Third Author
+    orcid: 0000-0000-0000-0000
+    affiliation:
+      - ref: Secondary Institution
 affiliations:
   - id: Main Institution
     name: Main Institution

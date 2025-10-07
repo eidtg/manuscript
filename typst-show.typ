@@ -19,6 +19,7 @@
        $if(it.email)$email: "$it.email$",$endif$
        $if(it.address)$address: "$it.address$",$endif$
        $if(it.attributes.corresponding)$corresponding: $it.attributes.corresponding$,$endif$
+       $if(it.attributes.equal-contributor)$equal-contributor: true,$endif$
      ),
   $endif$
   $endfor$
