@@ -5,13 +5,16 @@ execute:
   freeze: auto
 
 format:
+  typst:
+    keep-typ: true
+    template-partials: 
+      - typst-template.typ
+      - typst-show.typ
+    csl: draft.csl
   html:
-    toc: true
     comments:
       hypothesis: true
-  docx: default
-  jats: default
-  agu-pdf: default
+    csl: draft.csl
 
 
 
