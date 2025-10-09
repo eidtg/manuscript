@@ -5,32 +5,31 @@ author:
   - name: First Author
     orcid: 0000-0000-0000-0000
     email: email@adress.com
-    adress: City, Country
+    address: City, Country
     affiliation:
-      - ref: Main Institution
-      - ref: Secondary Institution
+      - ref: affil1
+      - ref: affil2
     attributes:
       equal-contributor: true
       corresponding: true
   - name: Second Author
-    equal-contributor: true
     orcid: 0000-0000-0000-0000
     affiliation:
-      - ref: Main Institution
+      - ref: affil1
     attributes:
       equal-contributor: true
   - name: Third Author
     orcid: 0000-0000-0000-0000
     affiliation:
-      - ref: Secondary Institution
+      - ref: affil2
 affiliations:
-  - id: Main Institution
+  - id: affil1
     name: Main Institution
     department: Department
     city: City
     state: State
     country: Country
-  - id: Secondary Institution
+  - id: affil2
     name: Secondary Institution
     department: Department
     city: City
@@ -89,3 +88,9 @@ The Codex Regius of the Poetic Edda is one of the most important medieval Icelan
 [![Oluf Olufsen Bagge - Yggdrasil, The Mundane Tree 1847](images/yggdrasil.jpg){#fig-1 width="80%"}](https://the-public-domain-review.imgix.net/collections/yggdrasil-the-sacred-ash-tree-of-norse-mythology/oct_19_new_prints_00008.jpg?w=857)
 
 \newpage
+
+## References {.unnumbered}
+
+:::{#refs}
+
+:::
