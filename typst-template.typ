@@ -26,7 +26,7 @@
 #let default-title(title) = {
   show: block.with(width: 100%)
   set align(left)
-  set text(size: 1.75em, weight: "bold")
+  set text(size: 1.5em, weight: "bold")
   title
 }
 

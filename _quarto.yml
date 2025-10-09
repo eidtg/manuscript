@@ -15,6 +15,11 @@ format:
     comments:
       hypothesis: true
     csl: draft.csl
+  docx:
+    reference-doc: doc-template.docx
+    filters:
+      - authors-block.lua
+    csl: draft.csl  
 
 
 

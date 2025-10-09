@@ -197,7 +197,7 @@
 #let default-title(title) = {
   show: block.with(width: 100%)
   set align(left)
-  set text(size: 1.75em, weight: "bold")
+  set text(size: 1.5em, weight: "bold")
   title
 }
 
@@ -525,7 +525,7 @@
       authors: (
          "First Author": (
        name: "First Author",
-       affiliation: ("Main Institution", "Secondary Institution"),
+       affiliation: ("affil1", "affil2"),
        email: "email\@adress.com",
        
        corresponding: true,
@@ -533,7 +533,7 @@
      ),
            "Second Author": (
        name: "Second Author",
-       affiliation: ("Main Institution"),
+       affiliation: ("affil1"),
        
        
        
@@ -541,7 +541,7 @@
      ),
            "Third Author": (
        name: "Third Author",
-       affiliation: ("Secondary Institution"),
+       affiliation: ("affil2"),
        
        
        
@@ -549,8 +549,8 @@
      ),
         ),
     affiliations: (
-        "Main Institution": "Department, Main Institution, City, Country",
-        "Secondary Institution": "Department, Secondary Institution, City, Country",
+        "affil1": "Department, Main Institution, City, Country",
+        "affil2": "Department, Secondary Institution, City, Country",
       ),
     abstract: [This is an abstract …
 
@@ -638,6 +638,21 @@ supplement: "Figure",
 
 
 #pagebreak()
+#block[
+#heading(
+level: 
+2
+, 
+numbering: 
+none
+, 
+[
+References
+]
+)
+]
+#block[
+] <refs>
 
 
  
