@@ -167,6 +167,13 @@ local function create_correspondence_blocks(authors, mark)
           pandoc.Str '>'
         })
       end
+
+      if author.address then
+        author_parts:insert(pandoc.LineBreak())
+        author_parts:insert(
+          pandoc.Span({pandoc.Str(stringify(author.address))}, {['custom-style'] = 'Author Address'})
+        )
+      end
       
       table.insert(corresponding_authors, author_parts)
     end

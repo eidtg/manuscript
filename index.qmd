@@ -5,7 +5,7 @@ author:
   - name: First Author
     orcid: 0000-0000-0000-0000
     email: email@adress.com
-    address: City, Country
+    address: Street Address, Postal Code, City, Country
     affiliation:
       - ref: affil1
       - ref: affil2

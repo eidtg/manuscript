@@ -44,7 +44,10 @@
     footnote[
       Corresponding author. 
       #if author.email != none {
-        [Email: #underline(author.email)]
+        [Email: #underline(author.email).]
+      }
+      #if author.address != none {
+        [Address: #author.address.]
       }
     ]
   }
@@ -267,7 +270,7 @@
       author_list_item.insert("corresponding", true)
       let address = if au_meta.keys().contains("address") and au_meta.address != "" {
         au_meta.address
-      } else { au_inst_primary }
+      } else { none }
       author_list_item.insert("address", address)
       
       let email = if au_meta.keys().contains("email") and au_meta.email != none {
